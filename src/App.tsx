@@ -1,5 +1,4 @@
-import * as React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Box from "@mui/material/Box";
 import MasonryImageList from "./MasonryImageList";
 import About from "./About";
@@ -7,6 +6,7 @@ import Title from "./Title";
 import NestedMenu from "./NestedMenu";
 import NavMenu from "./NavMenu";
 import Home from "./Home";
+// @ts-ignore
 import { caption, imageUrl } from "./metadata";
 
 function AppLayout() {
