@@ -22,9 +22,9 @@ const Title: React.FC = () => {
     <Box
       sx={{
         marginLeft: "12px",
-        fontWeight: 600,
-        fontSize: "24px",
-        marginBottom: "10px",
+        fontWeight: 800,
+        fontSize: "38px",
+        marginBottom: "5px",
         "& h2": {
           transition: "transform 0.8s ease-in-out",
           ":hover": {
@@ -34,7 +34,7 @@ const Title: React.FC = () => {
       }}
     >
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-        <h2 className="alice-regular"> Cindy Trinh</h2>
+        <h2> Cindy Trinh</h2>
       </Link>
     </Box>
   );
