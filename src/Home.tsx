@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ imageUrl, caption }) => {
       <Box p={2} textAlign="center">
         <Typography
           style={{ fontFamily: '"Alice", sans-serif' }}
-          variant="h7"
+          variant="h6"
           component="p"
         >
           {caption}
