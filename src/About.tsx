@@ -1,4 +1,3 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,8 +7,8 @@ import GmailLink from "./GmailLink";
 
 function About() {
   return (
-    <Box sx={{ m: 4 }}>
-      <Typography variant="h10" gutterBottom component="div">
+    <Box sx={{ m: 4, textAlign: "left" }}>
+      <Typography variant="h6" gutterBottom component="div">
         Cindy Trinh is a photographer, visual journalist, and activist who is
         passionate about social justice and human rights. Their photography aims
         to connect with people and places through the art of visual
