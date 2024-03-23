@@ -20,7 +20,7 @@ const s3 = new AWS.S3({
 
 var app = express();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: ["http://localhost:3000", "http://localhost:80"] }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -28,7 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // console.log(AWS_SECRET_ACCESS_KEY);
 
 app.get("/", (req, res) => {
-  res.send("Cindy Trinh");
+  res.send("Home");
+});
+
+app.get("/health", (req, res) => {
+  res.json({ status: "UP" });
 });
 
 app.get("/image/:subfolder/:key", async (req, res) => {
