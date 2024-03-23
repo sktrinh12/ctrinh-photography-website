@@ -6,6 +6,7 @@ import Title from "./Title";
 import NestedMenu from "./NestedMenu";
 import NavMenu from "./NavMenu";
 import Home from "./Home";
+import HealthStatus from "./Health";
 // @ts-ignore
 import { caption, imageUrl } from "./metadata";
 
@@ -36,6 +37,7 @@ function AppLayout() {
               path="/image-list-2"
               element={<MasonryImageList subfolder={"test"} />}
             />
+            <Route path="/health" element={<HealthStatus />} />
             <Route
               path="/"
               element={<Home imageUrl={imageUrl} caption={caption} />}
