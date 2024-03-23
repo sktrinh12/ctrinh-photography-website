@@ -8,7 +8,7 @@ import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 // import { itemDataMock } from "./images";
 
-const backendURL = "http://localhost:3001/s3Urls";
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 interface ImageData {
   img: string;
@@ -21,7 +21,7 @@ interface MasonryImageListProps {
 
 const fetchImages = async (subfolder: string): Promise<ImageData[]> => {
   try {
-    const response = await fetch(`${backendURL}/${subfolder}`);
+    const response = await fetch(`${backendURL}/s3Urls/${subfolder}`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
