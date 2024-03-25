@@ -6,9 +6,6 @@ import Modal from "@mui/material/Modal";
 import IconButton from "@mui/material/IconButton";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
-// import { itemDataMock } from "./images";
-
-const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 interface ImageData {
   img: string;
@@ -21,7 +18,7 @@ interface MasonryImageListProps {
 
 const fetchImages = async (subfolder: string): Promise<ImageData[]> => {
   try {
-    const response = await fetch(`${backendURL}/s3Urls/${subfolder}`);
+    const response = await fetch("/api/s3Urls/${subfolder}");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
